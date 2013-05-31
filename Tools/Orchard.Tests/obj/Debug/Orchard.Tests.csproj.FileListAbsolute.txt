@@ -1,0 +1,11 @@
+E:\Orchard.Source\src\Tools\Orchard.Tests\bin\Debug\Orchard.Tests.dll
+E:\Orchard.Source\src\Tools\Orchard.Tests\bin\Debug\Orchard.Tests.pdb
+E:\Orchard.Source\src\Tools\Orchard.Tests\bin\Debug\Moq.dll
+E:\Orchard.Source\src\Tools\Orchard.Tests\bin\Debug\nunit.framework.dll
+E:\Orchard.Source\src\Tools\Orchard.Tests\bin\Debug\Orchard.exe
+E:\Orchard.Source\src\Tools\Orchard.Tests\bin\Debug\Orchard.pdb
+E:\Orchard.Source\src\Tools\Orchard.Tests\bin\Debug\Moq.pdb
+E:\Orchard.Source\src\Tools\Orchard.Tests\bin\Debug\Moq.xml
+E:\Orchard.Source\src\Tools\Orchard.Tests\obj\Debug\ResolveAssemblyReference.cache
+E:\Orchard.Source\src\Tools\Orchard.Tests\obj\Debug\Orchard.Tests.dll
+E:\Orchard.Source\src\Tools\Orchard.Tests\obj\Debug\Orchard.Tests.pdb

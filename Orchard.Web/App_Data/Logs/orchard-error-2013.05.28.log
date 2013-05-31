@@ -1,0 +1,80 @@
+2013-05-28 19:57:46,140 [6] Orchard.Environment.DefaultOrchardShell - An unexcepted error occured while terminating the Shell
+System.ObjectDisposedException: Instances cannot be resolved and nested lifetimes cannot be created from this LifetimeScope as it has already been disposed.
+   at Autofac.Core.Lifetime.LifetimeScope.CheckNotDisposed()
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(IComponentRegistration registration, IEnumerable`1 parameters)
+   at lambda_method(Closure )
+   at Orchard.Environment.DefaultOrchardShell.<Terminate>b__6() in E:\Orchard.Source\src\Orchard\Environment\DefaultOrchardShell.cs:line 60
+   at Orchard.Environment.DefaultOrchardShell.SafelyTerminate(Action action) in E:\Orchard.Source\src\Orchard\Environment\DefaultOrchardShell.cs:line 71
+2013-05-28 20:51:37,187 [5] Orchard.Data.Migration.DataMigrationManager - An unexpected error orccured while applying migration on TheMetroTheme from version 1
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: Incorrect syntax near the keyword 'set'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in E:\Orchard.Source\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 347
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in E:\Orchard.Source\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 142
+   at Orchard.Data.Migration.Interpreters.AbstractDataMigrationInterpreter.Visit(ISchemaBuilderCommand command) in E:\Orchard.Source\src\Orchard\Data\Migration\Interpreters\AbstractDataMigrationInterpreter.cs:line 17
+   at Orchard.Data.Migration.Schema.SchemaBuilder.Run(ISchemaBuilderCommand command) in E:\Orchard.Source\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 46
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in E:\Orchard.Source\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 26
+   at TheMetroTheme.Migrations.UpdateFrom1() in e:\Orchard.Source\src\Orchard.Web\Themes\TheMetroTheme\Migrations.cs:line 36
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle._InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.RuntimeMethodHandle.InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in E:\Orchard.Source\src\Orchard\Data\Migration\DataMigrationManager.cs:line 105
+2013-05-28 20:51:39,203 [5] Orchard.Exceptions.DefaultExceptionPolicy - An unexpected exception was caught
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: Incorrect syntax near the keyword 'set'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in E:\Orchard.Source\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 347
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in E:\Orchard.Source\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 142
+   at Orchard.Data.Migration.Interpreters.AbstractDataMigrationInterpreter.Visit(ISchemaBuilderCommand command) in E:\Orchard.Source\src\Orchard\Data\Migration\Interpreters\AbstractDataMigrationInterpreter.cs:line 17
+   at Orchard.Data.Migration.Schema.SchemaBuilder.Run(ISchemaBuilderCommand command) in E:\Orchard.Source\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 46
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in E:\Orchard.Source\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 26
+   at TheMetroTheme.Migrations.UpdateFrom1() in e:\Orchard.Source\src\Orchard.Web\Themes\TheMetroTheme\Migrations.cs:line 36
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle._InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.RuntimeMethodHandle.InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in E:\Orchard.Source\src\Orchard\Data\Migration\DataMigrationManager.cs:line 109
+   at Orchard.Data.Migration.DataMigrationCoordinator.Installing(Feature feature) in E:\Orchard.Source\src\Orchard\Data\Migration\DataMigrationCoordinator.cs:line 26
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle._InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.RuntimeMethodHandle.InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Orchard.Events.DefaultOrchardEventBus.TryInvokeMethod(IEventHandler eventHandler, Type interfaceType, String methodName, IDictionary`2 arguments, IEnumerable& returnValue) in E:\Orchard.Source\src\Orchard\Events\DefaultOrchardEventBus.cs:line 83
+   at Orchard.Events.DefaultOrchardEventBus.TryInvoke(IEventHandler eventHandler, String interfaceName, String methodName, IDictionary`2 arguments, IEnumerable& returnValue) in E:\Orchard.Source\src\Orchard\Events\DefaultOrchardEventBus.cs:line 68
+   at Orchard.Events.DefaultOrchardEventBus.TryNotifyHandler(IEventHandler eventHandler, String messageName, String interfaceName, String methodName, IDictionary`2 eventData, IEnumerable& returnValue) in E:\Orchard.Source\src\Orchard\Events\DefaultOrchardEventBus.cs:line 52
+2013-05-28 20:51:46,156 [4] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 20:51:49,734 [4] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 20:53:16,375 [6] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 20:53:19,312 [6] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 20:53:54,093 [8] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 20:53:58,046 [8] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:02:03,015 [22] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:02:06,765 [22] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:05:50,453 [7] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:05:53,109 [7] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:08:14,921 [6] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:09:25,562 [5] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:09:28,125 [5] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:11:19,703 [15] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:11:22,312 [15] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:12:29,921 [5] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:12:32,562 [5] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:13:22,531 [5] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
+2013-05-28 21:13:25,250 [5] Orchard.Data.Migration.AutomaticDataMigrations - Could not run migrations automatically on TheMetroTheme
